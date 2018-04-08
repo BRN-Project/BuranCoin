@@ -1,0 +1,26 @@
+[Unit]
+Description=BRN's distributed currency daemon
+After=network.target
+
+[Service]
+User=brn
+Group=brn
+
+Type=forking
+PIDFile=/var/lib/brnd/brnd.pid
+
+ExecStart=/usr/bin/brnd -daemon -pid=/var/lib/brnd/brnd.pid \
+          -conf=/etc/brn/brn.conf -datadir=/var/lib/brnd
+
+ExecStop=-/usr/bin/brn-cli -conf=/etc/brn/brn.conf \
+         -datadir=/var/lib/brnd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

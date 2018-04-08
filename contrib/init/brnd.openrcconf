@@ -1,0 +1,26 @@
+# /etc/conf.d/brnd: config file for /etc/init.d/brnd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/brn/brn.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/brnd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/brnd.pid"
+
+# Where to write brnd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/brnd"
+
+# User and group to own brnd process
+#BITCOIND_USER="brn"
+#BITCOIND_GROUP="brn"
+
+# Path to brnd executable
+#BITCOIND_BIN="/usr/bin/brnd"
+
+# Nice value to run brnd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

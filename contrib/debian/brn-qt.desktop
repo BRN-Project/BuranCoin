@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=BuranCoin
+Comment=BuranCoin P2P Cryptocurrency
+Comment[fr]=BuranCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=BuranCoin, eşten eşe kriptografik sanal para birimi
+Exec=brn-qt %u
+Terminal=false
+Type=Application
+Icon=brn128
+MimeType=x-scheme-handler/brn;
+Categories=Office;Finance;
